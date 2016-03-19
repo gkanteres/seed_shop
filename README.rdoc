@@ -4,7 +4,7 @@
 This is an individual project for the Epicodus Ruby on Rails class.
 
 ===Author
-Gregory K
+Gregory Kanteres
 
 ===License
 *MIT License

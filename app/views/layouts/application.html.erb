@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Succulent Shop</title>
+  <title>Seed Shop</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -17,25 +17,17 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "Home", root_path, class: "nav navbar-brand" %>
+    <%= link_to "Seed Shop", root_path, class: "nav navbar-brand" %>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
     <!-- <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to 'Shop', DROPDOWN-MENU SHOP_PATH, method: :get %></li>
-        <li><%= link_to 'About', ABOUT_US_PATH, method: :get %></li>
+        <li><= link_to 'Shop', DROPDOWN-MENU SHOP_PATH, method: :get ></li>
+        <li><= link_to 'About', ABOUT_US_PATH, method: :get ></li>
     </ul> -->
 
     <ul class="nav navbar-nav navbar-right">
-      <!-- <li><%= link_to 'Search Bar', SEARCH_BAR_PATH, method: :? %></li> -->
-      <% if user_signed_in? %>
-        <!-- <li><%= link_to 'My Account', MY_ACCOUNT_PATH, method: :get %></li> -->
-        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'Sign In', new_user_session_path, method: :get %></li>
-        <li><%= link_to 'Sign Up', new_user_registration_path, method: :get %></li>
-      <% end %>
-        <!-- <li><%= link_to 'My Cart', MY_CART_PATH, method: :get %></li> -->
+      <li>Login Stuff</li>
     </ul>
 
   </div>

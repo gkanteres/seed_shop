@@ -1,0 +1,25 @@
+<div class="container">
+<h1><%= @product.name %></h1>
+<br />
+Image:
+<%= @product.image %>
+<br /><br />
+Description:
+<%= @product.description %>
+<br />
+Price:
+$<%= @product.price %>
+<br /><br />
+</div>
+
+<div class="container">
+<%= link_to 'Edit', edit_category_product_path(@category, @product) %> |
+<%= link_to(category_product_path(@category, @product),
+    data: {
+      confirm: 'Delete product?',
+      method: 'delete'}) do %>
+      Delete
+      <% end %>
+<br /><br />
+<%= link_to 'Back to Category', category_path(@category) %>
+</div>

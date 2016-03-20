@@ -1,19 +1,21 @@
-<h2>Add New Product</h2>
-
 <%= form_for [@category, @product] do |f| %>
   <%= f.hidden_field :category_id, value: @category.id %>
 
   <%= f.label :name %>
+  <br />
   <%= f.text_field :name %>
-
+  <br />
   <%= f.label :description %>
+  <br />
   <%= f.text_field :description %>
-
+  <br />
   <%= f.label :price %>
+  <br />
   <%= f.text_field :price %>
-
+  <br />
   <%= f.label :image %>
+  <br />
   <%= f.text_field :image %>
-
+  <br />
   <%= f.submit "Enter" %>
 <% end %>

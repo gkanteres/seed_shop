@@ -43,6 +43,8 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'warden'
+  gem 'factory_girl_rails', '~> 4.0.0'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end

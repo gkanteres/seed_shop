@@ -2,16 +2,24 @@
 
 <h2><%= @category.description %></h2>
 <br />
-<%= link_to 'Add new product to category', new_category_product_path(@category) %>
-<br />
-<%= link_to 'Edit Category', edit_category_path(@category) %> |
+
+<div class="container">
+<h3>Products:</h3>
+<% @products.each do |product| %>
+  <h4><%= link_to product.name, category_product_path(@category, product) %></h4>
+<% end %>
+<br /><br />
+</div>
+
+<div class="container">
+<%= link_to 'Add new product to category', new_category_product_path(@category) %> |
+<%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to(category_path(@category),
     data: {
       confirm: 'Delete category?',
       method: 'delete'}) do %>
-      Delete Category
+      Delete
       <% end %>
-
-<br />
-<br />
-<%= link_to 'All Categories', categories_path(@category) %>
+<br /><br />
+<%= link_to 'All Categories', categories_path %>
+</div>

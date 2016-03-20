@@ -1,6 +1,8 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+$body-bg: transparent;
+
 footer {
   position: absolute;
   bottom: 0;
@@ -14,4 +16,8 @@ footer {
 .navbar {
   background: linear-gradient(#607740, #aac18b);
   border-color: #333f22;
+}
+
+body {
+  background-image: url(/assets/images/wood_texture1584.jpg);
 }

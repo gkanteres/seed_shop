@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @products = Category.products
+    #@products = Category.products
   end
 
   def new
@@ -15,6 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    @category = Category.new(category_params)
     if @category.save
       redirect_to category_path(@category)
     else

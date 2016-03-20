@@ -1,0 +1,13 @@
+<h1><%= @category.name %></h1>
+
+<h2><%= @category.description %></h2>
+<br />
+<%= link_to 'Add new product to category', new_category_product_path(@category) %>
+<br />
+<%= link_to 'Edit Category', edit_category_path(@category) %> |
+<%= link_to(category_path(@category),
+    data: {
+      confirm: 'Delete category?',
+      method: 'delete'}) do %>
+      Delete Category
+      <% end %>

@@ -1,0 +1,16 @@
+<h2>Category Form</h2>
+
+<div class="container">
+  <%= form_for [@category] do |f| %>
+
+    <%= f.label :name %>
+  <br />
+    <%= f.text_field :name %>
+  <br />
+    <%= f.label :description %>
+  <br />
+    <%= f.text_field :description %>
+  <br /><br />
+    <%= f.submit "Enter" %>
+  <% end %>
+</div>

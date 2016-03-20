@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  it { should belong_to :store }
   it { should belong_to :category }
   it { should belong_to :user }
   it { should belong_to :cart }

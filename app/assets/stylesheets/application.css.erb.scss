@@ -1,12 +1,31 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+$kelp-green: #333f22;
+$hover-green: #aacfab;
 $body-bg: transparent;
 
 body {
-  background-image: image-url('wood_texture1584.jpg');
-  background-repeat: no-repeat;
+  background-image: url('http://tfhfamily.org/wp-content/uploads/2013/11/wood_texture1584._50.jpg');
+  // background-image: :image_url('wood_texture1584.jpg');
   background-size: 100%;
+  color: #79b49b;
+  font-family: 'Old Standard TT', serif;
+  font-size: 22px;
+}
+
+a {
+  color: #79b47a;
+}
+
+a:hover {
+  color: $hover-green;
+  text-decoration: none;
+}
+
+#main_div {
+  background-color: black;
+  height: 75vh;
 }
 
 footer {
@@ -17,9 +36,39 @@ footer {
   height: 100px;
   background-color: gray;
   background: linear-gradient(#aac18b, #607740);
+  a {
+    color: $kelp-green;
+  }
+  a:hover {
+    color: #1d2414;
+  }
 }
+
 
 .navbar {
   background: linear-gradient(#607740, #aac18b);
-  border-color: #333f22;
+  border-color: $kelp-green;
+  font-family: 'Cabin', sans-serif;
+  color: $kelp-green;
+  .navbar-nav {
+      .dropdown-toggle {
+        color: $kelp-green;
+      }
+      .dropdown-toggle:hover {
+        color: $hover-green;
+        text-shadow: 2px 2px $kelp-green;
+      }
+  }
+}
+
+.navbar-header {
+  .navbar-brand {
+  font-family: 'Cabin', sans-serif;
+  font-size: 100%;
+  color: $kelp-green;
+  }
+  .navbar-brand:hover {
+    color: $hover-green;
+    text-shadow: 2px 2px $kelp-green;
+  }
 }

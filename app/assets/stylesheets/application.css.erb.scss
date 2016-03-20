@@ -3,6 +3,12 @@
 
 $body-bg: transparent;
 
+body {
+  background-image: image-url('wood_texture1584.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -16,8 +22,4 @@ footer {
 .navbar {
   background: linear-gradient(#607740, #aac18b);
   border-color: #333f22;
-}
-
-body {
-  background-image: url(/assets/images/wood_texture1584.jpg);
 }

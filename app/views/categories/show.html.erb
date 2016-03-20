@@ -1,10 +1,10 @@
 <h1><%= @category.name %></h1>
 
-<h2><%= @category.description %></h2>
+<h3><i><%= @category.description %></i></h3>
 <br />
 
 <div class="container">
-<h3>Products:</h3>
+<h2>Products:</h2>
 <% @products.each do |product| %>
   <h4><%= link_to product.name, category_product_path(@category, product) %></h4>
 <% end %>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="container">
-<%= link_to 'Add new product to category', new_category_product_path(@category) %> |
+<%= link_to 'Add new product', new_category_product_path(@category) %> |
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to(category_path(@category),
     data: {

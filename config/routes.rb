@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  #devise_for :users, :controllers => { registrations: 'registrations'}
    root 'categories#index'
+   #devise_for :users, :controllers => { registrations: 'registrations'}
    resources :categories do
      resources :products
    end

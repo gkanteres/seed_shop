@@ -3,30 +3,36 @@
 
 $kelp-green: #333f22;
 $hover-green: #aacfab;
+$link-green: #79b47a;
+$heading-green: #79b49b;
 $body-bg: transparent;
 
 body {
   background-image: url('http://tfhfamily.org/wp-content/uploads/2013/11/wood_texture1584._50.jpg');
   // background-image: :image_url('wood_texture1584.jpg');
   background-size: 100%;
-  color: #79b49b;
+  color: $heading-green;
   font-family: 'Old Standard TT', serif;
   font-size: 22px;
-}
 
-a {
-  color: #79b47a;
-}
-
-a:hover {
-  color: $hover-green;
-  text-decoration: none;
+  .category_index {
+    text-align: center;
+  }
 }
 
 #main_div {
   background-color: black;
   height: 75vh;
 }
+
+a {
+  color: $link-green;
+}
+a:hover {
+  color: $hover-green;
+  text-decoration: none;
+}
+
 
 footer {
   position: absolute;

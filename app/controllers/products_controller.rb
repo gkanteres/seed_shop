@@ -55,6 +55,7 @@ class ProductsController < ApplicationController
 
   def set_categories
     @categories = Category.all
+  end
 
   def set_category
     @category= Category.find(params[:category_id])
@@ -64,5 +65,4 @@ class ProductsController < ApplicationController
     params.require('product').permit(:name, :description, :price, :image, :category_id, :user_id, :cart_id)
   end
 
-  end
 end

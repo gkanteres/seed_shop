@@ -62,12 +62,11 @@
 <footer>
   <div class="container">
     <% if admin_signed_in? %>
-      <p>Admin signed in!</p>
+      <p>Admin signed in! <%= link_to '-Sign Out', destroy_user_session_path, method: :delete %></p>
       <%= link_to 'New Category', new_category_path %><br />
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Admin Sign In', new_admin_session_path, method: :get %><br />
-      <%= link_to 'Admin Sign Up', new_admin_registration_path, method: :get %>
+       <!-- <p>link_to 'Admin Sign Up', new_admin_registration_path, method: :get</p>  -->
     <% end %>
   </div>
 </footer>

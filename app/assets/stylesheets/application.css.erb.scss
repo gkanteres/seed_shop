@@ -20,6 +20,10 @@ body {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 #main_div {
   background-color: black;
   height: 75vh;
@@ -42,6 +46,7 @@ footer {
   height: 100px;
   background-color: gray;
   background: linear-gradient(#aac18b, #607740);
+  color: $kelp-green;
   a {
     color: $kelp-green;
   }

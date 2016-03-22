@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
-  #before_action :authenticate_user!, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_categories
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -52,6 +53,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def set_categories
+    @categories = Category.all
+
   def set_category
     @category= Category.find(params[:category_id])
   end
@@ -60,5 +64,5 @@ class ProductsController < ApplicationController
     params.require('product').permit(:name, :description, :price, :image, :category_id, :user_id, :cart_id)
   end
 
-
+  end
 end

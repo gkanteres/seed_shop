@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def sign_up_params
-    @categories = Category.all
+    #@categories = Category.all
     params.require(:user).permit(:email, :username, :first_name, :last_name, :address, :phone, :password, :password_confirmation)
   end
 

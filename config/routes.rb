@@ -2,7 +2,18 @@ Rails.application.routes.draw do
 
    root 'categories#index'
 
-   devise_for :admins
+   devise_for :admins,
+   :skip => [:registrations, :sessions]
+
+   as :admin do
+  # Registrations
+  get   '/admins/signup'   => 'admins/registrations#new', as: :new_admin_registration
+  post  '/admins/signup'   => 'admins/registrations#create', as: :admin_registration
+  # Sessions
+  get   '/admins/signin'   => 'admins/sessions#new', as: :new_admin_session
+  post  '/admins/signin'   => 'admins/sessions#create', as: :admin_session
+  delete '/admins/signout' => 'admins/sessions#destroy', as: :destroy_admin_session
+end
 
    devise_for :users,
    :skip => [:registrations, :sessions]

@@ -64,9 +64,11 @@
   <div class="container">
     <% if admin_signed_in? %>
       <p>Admin signed in!</p>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
     <% else %>
       <p>Admin signed out!</p>
-      
+      <li><%= link_to 'Admin Sign In', new_admin_session_path, method: :get %></li>
+      <li><%= link_to 'Admin Sign Up', new_admin_registration_path, method: :get %></li>
     <% end %>
     <%= link_to 'New Category', new_category_path %>
   </div>

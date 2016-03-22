@@ -37,8 +37,7 @@
       </li>
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
-      <li>My Cart []--</li>
+    <ul class="nav navbar-nav navbar-right" id="user_auth">
       <% if user_signed_in? %>
         <li><i>Signed in as: </i><%= current_user.username %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -64,13 +63,12 @@
   <div class="container">
     <% if admin_signed_in? %>
       <p>Admin signed in!</p>
-      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      <%= link_to 'New Category', new_category_path %><br />
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
-      <p>Admin signed out!</p>
-      <li><%= link_to 'Admin Sign In', new_admin_session_path, method: :get %></li>
-      <li><%= link_to 'Admin Sign Up', new_admin_registration_path, method: :get %></li>
+      <%= link_to 'Admin Sign In', new_admin_session_path, method: :get %><br />
+      <%= link_to 'Admin Sign Up', new_admin_registration_path, method: :get %>
     <% end %>
-    <%= link_to 'New Category', new_category_path %>
   </div>
 </footer>
 </html>

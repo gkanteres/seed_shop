@@ -58,11 +58,11 @@ footer {
   color: $kelp-green;
   .navbar-nav {
       .dropdown-toggle {
+        background: linear-gradient(#607740, #aac18b);
         color: $kelp-green;
       }
       .dropdown-toggle:hover {
         color: $hover-green;
-        text-shadow: 2px 2px $kelp-green;
       }
   }
 }

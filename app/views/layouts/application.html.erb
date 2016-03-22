@@ -62,6 +62,12 @@
 </body>
 <footer>
   <div class="container">
+    <% if admin_signed_in? %>
+      <p>Admin signed in!</p>
+    <% else %>
+      <p>Admin signed out!</p>
+      
+    <% end %>
     <%= link_to 'New Category', new_category_path %>
   </div>
 </footer>

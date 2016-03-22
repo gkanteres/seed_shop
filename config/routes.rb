@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
    root 'categories#index'
 
+   devise_for :admins
+
    devise_for :users,
    :skip => [:registrations, :sessions]
 

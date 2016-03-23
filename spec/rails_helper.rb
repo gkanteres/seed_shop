@@ -8,8 +8,11 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'factory_girl_rails'
 require 'database_cleaner'
+require 'simplecov'
 
 ActiveRecord::Migration.maintain_test_schema!
+
+SimpleCov.start
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -42,6 +45,15 @@ config.before :each do
     Warden.test_reset!
     DatabaseCleaner.clean
   end
+
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
+
 end
 
 Shoulda::Matchers.configure do |config|

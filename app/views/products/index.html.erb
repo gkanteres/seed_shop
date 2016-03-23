@@ -1,0 +1,9 @@
+<h1>Search Results:</h1>
+
+<% @products.each do |product| %>
+  <%= link_to product.name, category_product_path(product, product.category_id) %>
+<% end %>
+
+<% if @products.blank? %>
+  <h4>There are no products containing the term <%= params[:search] %>.</h4>
+<% end %>

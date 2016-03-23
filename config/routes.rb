@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
    root 'categories#index'
 
+   get '/products' => 'products#index', as: :products
+
+   resources :categories do
+     resources :products do
+       resources :reviews
+     end
+   end
+
    devise_for :admins,
    :skip => [:registrations, :sessions]
 
@@ -19,7 +27,7 @@ end
    :skip => [:registrations, :sessions]
 
    as :user do
-  get 'users/:id'   => 'users#show', as: :user
+  get '/users/:id'   => 'users#show', as: :user
   # Registrations
   get   '/signup'   => 'users/registrations#new', as: :new_user_registration
   post  '/signup'   => 'users/registrations#create', as: :user_registration
@@ -29,11 +37,6 @@ end
   delete '/signout' => 'users/sessions#destroy', as: :destroy_user_session
 end
 
-   resources :categories do
-     resources :products do
-       resources :reviews
-     end
-   end
 
 
 end

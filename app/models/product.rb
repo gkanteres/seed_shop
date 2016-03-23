@@ -3,4 +3,8 @@ class Product < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   belongs_to :cart
+
+  def self.search(search)
+    where("name ILIKE ? OR latin_name ILIKE ? OR description ILIKE ? OR tag ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+  end
 end

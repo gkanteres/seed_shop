@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:search]
+      @products = Product.search(params[:search]).order("name DESC")
+    else
+      flash[:notice] = "Search returned no results"
+    end
   end
 
   def new

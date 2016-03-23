@@ -29,7 +29,9 @@ end
 end
 
    resources :categories do
-     resources :products
+     resources :products do
+       resources :reviews
+     end
    end
 
 

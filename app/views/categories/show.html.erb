@@ -12,6 +12,12 @@
 </div>
 
 <div class="container">
+  <%= link_to 'All Categories', categories_path %>
+</div>
+
+
+<% if admin_signed_in? %>
+<div class="container">
 <%= link_to 'Add new product', new_category_product_path(@category) %> |
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to(category_path(@category),
@@ -19,7 +25,6 @@
       confirm: 'Delete category?',
       method: 'delete'}) do %>
       Delete
-      <% end %>
-<br /><br />
-<%= link_to 'All Categories', categories_path %>
+    <% end %>
+<% end %>
 </div>

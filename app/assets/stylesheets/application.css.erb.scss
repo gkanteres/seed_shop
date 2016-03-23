@@ -20,6 +20,10 @@ body {
   }
 }
 
+h1, h2 {
+  font-family: 'Cabin', sans-serif;
+}
+
 ul {
   list-style: none;
 }
@@ -46,6 +50,7 @@ footer {
   height: 100px;
   background-color: gray;
   background: linear-gradient(#aac18b, #607740);
+  font-family: 'Cabin', sans-serif;
   color: $kelp-green;
   a {
     color: $kelp-green;

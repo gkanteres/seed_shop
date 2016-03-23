@@ -19,6 +19,7 @@ end
    :skip => [:registrations, :sessions]
 
    as :user do
+  get 'users/:id'   => 'users#show', as: :user
   # Registrations
   get   '/signup'   => 'users/registrations#new', as: :new_user_registration
   post  '/signup'   => 'users/registrations#create', as: :user_registration

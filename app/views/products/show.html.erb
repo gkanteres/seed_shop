@@ -32,7 +32,6 @@ Tags:
 <% if user_signed_in? %>
 <div class="container">
   <%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
-  <!-- < %= render template: 'reviews/new', locals: {:@category => @category, :@product => @product, :@review => @product.reviews.new} %> -->
 </div>
 <% else %>
 <p>You must be signed in to add a review!</p>

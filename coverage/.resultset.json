@@ -50,6 +50,27 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/seed_shop/spec/features/add_review_to_product_pages_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/seed_shop/spec/features/create_category_pages_spec.rb": [
         1,
         1,
@@ -123,6 +144,6 @@
         null
       ]
     },
-    "timestamp": 1458840445
+    "timestamp": 1458842826
   }
 }

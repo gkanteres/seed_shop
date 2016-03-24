@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/gregory/Desktop/seed_shop/spec/controllers/products_controller_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/controllers/products_controller_spec.rb": [
         1,
         null,
         1,
@@ -15,7 +15,7 @@
         2,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/controllers/reviews_controller_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/controllers/reviews_controller_spec.rb": [
         1,
         null,
         null,
@@ -176,7 +176,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/features/add_product_to_category_pages_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/features/add_product_to_category_pages_spec.rb": [
         1,
         null,
         1,
@@ -185,7 +185,28 @@
         1,
         1,
         1,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/seed_shop/spec/features/create_category_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         0,
         0,
         0,
@@ -193,21 +214,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/features/create_category_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/home/gregory/Desktop/seed_shop/spec/helpers/reviews_helper_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/helpers/reviews_helper_spec.rb": [
         1,
         null,
         null,
@@ -224,14 +231,14 @@
         1,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/models/admin_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/models/admin_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/models/category_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/models/category_spec.rb": [
         1,
         null,
         1,
@@ -240,27 +247,7 @@
         2,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/models/product_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/home/gregory/Desktop/seed_shop/spec/models/review_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/gregory/Desktop/seed_shop/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/models/product_spec.rb": [
         1,
         null,
         1,
@@ -273,7 +260,27 @@
         2,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/requests/reviews_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/models/review_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/seed_shop/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/seed_shop/spec/requests/reviews_spec.rb": [
         1,
         null,
         1,
@@ -285,7 +292,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/routing/reviews_routing_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/routing/reviews_routing_spec.rb": [
         1,
         null,
         1,
@@ -326,7 +333,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/views/reviews/edit.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/views/reviews/edit.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -342,7 +349,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/views/reviews/index.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/views/reviews/index.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -358,7 +365,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/views/reviews/new.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/views/reviews/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -374,7 +381,7 @@
         null,
         null
       ],
-      "/home/gregory/Desktop/seed_shop/spec/views/reviews/show.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/seed_shop/spec/views/reviews/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -388,6 +395,6 @@
         null
       ]
     },
-    "timestamp": 1458763216
+    "timestamp": 1458835676
   }
 }

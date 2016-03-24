@@ -1,6 +1,9 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_category
+  before_action :set_product
   before_action :set_categories
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @reviews = Review.all
@@ -17,18 +20,15 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-
-    respond_to do |format|
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new(review_params)
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
+        redirect_to category_product_path(@category, @product)
       else
-        format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
+        flash[:notice] = "There was a problem creating the review."
+        render :new
       end
     end
-  end
 
   def update
     respond_to do |format|
@@ -55,11 +55,19 @@ class ReviewsController < ApplicationController
       @review = Review.find(params[:id])
     end
 
+    def set_category
+      @category = Category.find(params[:category_id])
+    end
+
+    def set_product
+      @product = Product.find(params[:product_id])
+    end
+
     def set_categories
       @categories = Category.all
     end
 
     def review_params
-      params.fetch(:review, {})
+      params.require('review').permit(:review_title, :review_content, :rating, :product_id)
     end
 end

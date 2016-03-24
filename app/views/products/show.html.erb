@@ -29,6 +29,21 @@ Tags:
 </div>
 <br />
 
-<!-- space for review form: -->
+<% if user_signed_in? %>
 <div class="container">
+  <%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
+  <!-- < %= render template: 'reviews/new', locals: {:@category => @category, :@product => @product, :@review => @product.reviews.new} %> -->
 </div>
+<% else %>
+<p>You must be signed in to add a review!</p>
+<% end %>
+
+<% if @product.reviews %>
+  <% @product.reviews.reverse_each do |review| %>
+  <%= review.review_title %><br />
+  <%= review.review_content %><br />
+  Rating: <%= review.rating %><br />
+  <i><%= review.created_at %></i>
+  <hr>
+  <% end %>
+<% end %>

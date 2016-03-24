@@ -41,7 +41,6 @@ Tags:
   <% @product.reviews.reverse_each do |review| %>
   <%= review.review_title %><br />
   <%= review.review_content %><br />
-  Rating: <%= review.rating %><br />
   <i><%= review.created_at %></i>
   <hr>
   <% end %>

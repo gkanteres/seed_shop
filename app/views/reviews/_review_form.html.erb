@@ -3,15 +3,15 @@
   <%= f.hidden_field :product_id, value: @product.id %>
 
 <div class="form-group">
-  <%= f.label :review_title %>
+  <%= f.label :review_title %><br />
   <%= f.text_field :review_title %>
 </div>
 <div class="form-group">
-  <%= f.label :review_content %>
-  <%= f.text_field :review_content %>
+  <%= f.label :review_content %><br />
+  <%= f.text_area :review_content %>
 </div>
 <div class="form-group">
-  <%= f.label :rating %>
+  <%= f.label :rating %> (1-5)<br />
   <%= f.number_field :rating %>
 </div>
   <%= f.submit "Enter" %>

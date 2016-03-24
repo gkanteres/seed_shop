@@ -69,28 +69,11 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/helpers/reviews_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
       "/Users/Guest/Desktop/seed_shop/spec/models/admin_spec.rb": [
         1,
         null,
         1,
-        1,
+        2,
         null
       ],
       "/Users/Guest/Desktop/seed_shop/spec/models/category_spec.rb": [
@@ -136,6 +119,6 @@
         null
       ]
     },
-    "timestamp": 1458837157
+    "timestamp": 1458837276
   }
 }

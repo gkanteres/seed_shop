@@ -26,6 +26,8 @@ body {
   // background: image-url('wood_texture1584.jpg'); could not load
   // background: image_url('wood_texture1584.jpg'); could not load
   // background: asset-data-url('wood_texture1584.jpg'); "Sprockets::FileNotFound in Categories#index"
+  // background: image_url('/assets/wood_texture1584.jpg');
+  // background: asset_url('/assets/wood_texture1584.jpg');
 // }
 
 h1, h2 {

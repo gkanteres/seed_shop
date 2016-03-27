@@ -1,5 +1,6 @@
 <h1>Search Results:</h1>
 <% @products.each do |product| %>
+  <img src="<%= product.image %>" width="100px" height="100px"/><br />
   <%= link_to product.name, category_product_path(product, product.category_id) %><br />
 <% end %>
 

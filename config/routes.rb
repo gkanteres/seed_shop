@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
    resources :ratings, only: :update
 
+   resources :tags
+
    resources :categories do
      resources :products do
        resources :reviews

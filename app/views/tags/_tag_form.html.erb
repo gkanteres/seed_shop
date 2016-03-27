@@ -1,0 +1,11 @@
+<h2>Tag Form</h2>
+
+<div class="container">
+  <%= form_for [@tag] do |f| %>
+    <%= f.label :name %>
+    <br />
+    <%= f.text_field :name %>
+    <br /><br />
+    <%= f.submit "Enter" %>
+  <% end %>
+</div>

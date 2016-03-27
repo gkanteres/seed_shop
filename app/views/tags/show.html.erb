@@ -1,0 +1,28 @@
+<h1><%= @tag.name %></h1>
+
+<div class="container">
+<h2>Products tagged with <%= @tag.name %>:</h2>
+<% if @products.any? %>
+  <% @products.each do |product| %>
+    <h4><%= link_to product.name, category_product_path(@category, product) %></h4>
+  <% end %>
+<% end %>
+<br /><br />
+</div>
+
+<div class="container">
+  <%= link_to 'All Tags', tags_path %>
+</div>
+
+
+<% if admin_signed_in? %>
+<div class="container">
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to(tag_path(@tag),
+    data: {
+      confirm: 'Delete tag?',
+      method: 'delete'}) do %>
+      Delete
+    <% end %>
+<% end %>
+</div>

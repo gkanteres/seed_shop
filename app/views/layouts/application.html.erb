@@ -77,6 +77,7 @@
     <% if admin_signed_in? %>
       <p>Admin signed in! <%= link_to '-Sign Out', destroy_user_session_path, method: :delete %></p>
       <%= link_to 'New Category', new_category_path %><br />
+      <%= link_to 'New Tag', new_tag_path %><br />
     <% else %>
       <%= link_to 'Admin Sign In', new_admin_session_path, method: :get %><br />
        <!-- <p>link_to 'Admin Sign Up', new_admin_registration_path, method: :get</p>  -->

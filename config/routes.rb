@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
    get '/products' => 'products#index', as: :products
 
+   resources :ratings, only: :update
+
    resources :categories do
      resources :products do
        resources :reviews

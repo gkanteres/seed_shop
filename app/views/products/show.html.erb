@@ -7,12 +7,13 @@ Image:
 <br /><br />
 Description:
 <%= @product.description %>
+<br /><br />
+<p>Average rating</p>
+<div id="star"></div>
+<div id="user_star"</div><br />
 <br />
 Price:
 $<%= @product.price %>
-<br /><br />
-Tags:
-<%= @product.tag %>
 <br /><br />
 </div>
 
@@ -45,3 +46,22 @@ Tags:
   <hr>
   <% end %>
 <% end %>
+
+<!-- <script>
+  $('#star').raty({
+    readOnly: true,
+    score: < %= @review.average_rating %>,
+    path: '/assets'
+  });
+  $('#user_star').raty({
+    score: < %= @rating.score %>,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + < %= @rating.id %> + '?user=< %= @current_user.username %>',
+        type: 'PATCH',
+        data: { score: score, review_id: '< %= @review.id %>' }
+      });
+    }
+  });
+</script> -->

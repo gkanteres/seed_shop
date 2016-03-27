@@ -10,7 +10,6 @@ describe 'the add product to a category process' do
     fill_in 'product_name', with: 'Test Product'
     fill_in 'product_latin_name', with: 'Testus Productii'
     fill_in 'product_description', with: 'Test Product Description'
-    fill_in 'product_tag', with: 'product_tag'
     fill_in 'product_price', with: 5
     fill_in 'product_image', with: 'product_image_url'
     click_on 'Enter'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324182920) do
+ActiveRecord::Schema.define(version: 20160327174230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,8 +51,13 @@ ActiveRecord::Schema.define(version: 20160324182920) do
     t.integer "user_id"
     t.integer "category_id"
     t.integer "cart_id"
-    t.string  "tag"
     t.string  "latin_name"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "review_id"
+    t.integer "score",     default: 0
   end
 
   create_table "reviews", force: :cascade do |t|

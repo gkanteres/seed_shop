@@ -30,7 +30,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    #@review = Review.find(params[:review_id])
   end
 
   def edit
@@ -68,7 +67,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require('product').permit(:name, :latin_name, :description, :tag, :price, :image, :category_id, :user_id, :cart_id)
+    params.require('product').permit(:name, :latin_name, :description, :price, :image, :category_id, :user_id, :cart_id)
   end
 
 end

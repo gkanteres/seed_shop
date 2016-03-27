@@ -2,8 +2,9 @@
 <h1><%= @product.name %></h1>
 <h2><i><%= @product.latin_name %></i></h2>
 <br />
-Image:
-<%= @product.image %>
+Image:<br />
+<!-- images entered in this format: /assets/balsamroot.jpg -->
+<img src="<%= @product.image %>" />
 <br /><br />
 Description:
 <%= @product.description %>

@@ -1,10 +1,10 @@
 class CategoriesController < ApplicationController
   before_action :set_categories
+  before_action :set_tags
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @categories = Category.all
   end
 
   def show
@@ -50,6 +50,10 @@ class CategoriesController < ApplicationController
 
   def set_categories
     @categories = Category.all
+  end
+
+  def set_tags
+    @tags = Tag.all
   end
 
   def set_category

@@ -1,14 +1,14 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
+  before_action :set_tags
   before_action :set_categories
 
   def index
-    @tags = Tag.all
-    if params[:search]
-      @tags = Tag.search(params[:search]).order("name DESC")
-    else
-      flash[:notice] = "Search returned no results"
-    end
+    # if params[:search]
+    #   @tags = Tag.search(params[:search]).order("name DESC")
+    # else
+    #   flash[:notice] = "Search returned no results"
+    # end
   end
 
   def new
@@ -53,6 +53,10 @@ class TagsController < ApplicationController
 
   def set_tag
     @tag = Tag.find(params[:id])
+  end
+
+  def set_tags
+    @tags = Tag.all
   end
 
   def set_categories

@@ -1,7 +1,7 @@
 <h1><%= @tag.name %></h1>
 
 <div class="container">
-<h2>Products tagged with <%= @tag.name %>:</h2>
+<h3>Products tagged with <%= @tag.name %>:</h3>
 <% if @products.any? %>
   <% @products.each do |product| %>
     <h4><%= link_to product.name, category_product_path(@category, product) %></h4>

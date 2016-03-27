@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_tags
   before_action :set_categories
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
+    @tags = Tag.all
     @products = Product.all
     if params[:search]
       @products = Product.search(params[:search]).order("name DESC")
@@ -56,6 +58,10 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def set_tags
+    @tags = Tag.all
   end
 
   def set_categories

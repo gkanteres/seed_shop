@@ -1,5 +1,4 @@
 <h1>Search Results:</h1>
-
 <% @products.each do |product| %>
   <%= link_to product.name, category_product_path(product, product.category_id) %><br />
 <% end %>

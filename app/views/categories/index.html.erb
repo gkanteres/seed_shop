@@ -1,6 +1,6 @@
 <div class="container category_index">
   <h1>Product Categories:</h1>
-
+  <br /><br />
   <ul>
     <% @categories.each do |category| %>
       <li><%= link_to category.name, category_path(category) %></li><br />

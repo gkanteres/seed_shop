@@ -5,6 +5,7 @@
 
 <div class="container">
 <h2>Products:</h2>
+<hr>
 <% @products.each do |product| %>
   <img src="<%= product.image %>" width="100px" height="100px"/><br />
   <h4><%= link_to product.name, category_product_path(@category, product) %></h4>

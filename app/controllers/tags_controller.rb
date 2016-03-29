@@ -27,6 +27,8 @@ class TagsController < ApplicationController
 
   def show
     @products = @tag.products
+    # @product = Product.find(params[:product_id])
+    # @category = @product.category.find(params[:category_id])
   end
 
   def edit
@@ -64,7 +66,7 @@ class TagsController < ApplicationController
   end
 
   def tag_params
-    params.require('tag').permit(:name)
+    params.require('tag').permit(:name, product_ids: [])
   end
 
 end

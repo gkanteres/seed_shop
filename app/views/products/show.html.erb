@@ -9,10 +9,18 @@ Image:<br />
 Description:
 <%= @product.description %>
 <br /><br />
-<p>Average rating</p>
+
+<!-- <p>Average rating</p>
 <div id="star"></div>
 <div id="user_star"</div><br />
-<br />
+<br /> -->
+
+Tags:
+<% @product.tags.each do |tag| %>
+<%= link_to tag.name, tag_path(tag) %>
+<% end %>
+<br /><br />
+
 Price:
 $<%= @product.price %>
 <br /><br />

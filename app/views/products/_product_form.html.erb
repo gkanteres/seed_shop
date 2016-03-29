@@ -22,5 +22,15 @@
   <%= f.label :image %>
   <%= f.text_field :image %>
 </div>
+
+<div>
+  <% Tag.all.each do |tag| %>
+    <%= check_box_tag "product[tag_ids][]", tag.id, f.object.tags.include?(tag) %>
+    <%= tag.name %>
+  <% end %>
+</div>
+
+<div class="actions">
   <%= f.submit "Enter" %>
+</div>
 <% end %>

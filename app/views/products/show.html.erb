@@ -2,11 +2,11 @@
 <h1><%= @product.name %></h1>
 <h2><i><%= @product.latin_name %></i></h2>
 <br />
-Image:<br />
 <!-- images entered in this format: /assets/balsamroot.jpg -->
 <img src="<%= @product.image %>" width="300px" height="300px"/>
 <br /><br />
 Description:
+<br />
 <%= @product.description %>
 <br /><br />
 
@@ -16,12 +16,14 @@ Description:
 <br /> -->
 
 Tags:
+<br />
 <% @product.tags.each do |tag| %>
-<%= link_to tag.name, tag_path(tag) %>
+<%= link_to tag.name, tag_path(tag) %>;
 <% end %>
 <br /><br />
 
 Price:
+<br />
 $<%= @product.price %>
 <br /><br />
 </div>
@@ -47,14 +49,21 @@ $<%= @product.price %>
 <p>You must be signed in to add a review!</p>
 <% end %>
 
-<% if @product.reviews %>
+<div class="container">
+<h3><%= @product.name %> Reviews:</h3>
+<hr>
+<% if @product.reviews.any? %>
   <% @product.reviews.reverse_each do |review| %>
-  <%= review.review_title %><br />
-  <%= review.review_content %><br />
-  <i><%= review.created_at %></i>
-  <hr>
+    <i>"<%= review.review_title %>"</i><br />
+    <%= review.review_content %><br />
+    Reviewed by:<br /> <!-- < %= link_to review.user.username, user_path(user) % > -->
+    <i><%= review.created_at %></i>
+    <hr>
   <% end %>
+<% else %>
+  <p><i>Be the first to review this product!</i></p>
 <% end %>
+</div>
 
 <!-- <script>
   $('#star').raty({

@@ -4,8 +4,10 @@
 <h3>Products tagged with <%= @tag.name %>:</h3>
 <% if @products.any? %>
   <% @products.each do |product| %>
-    <h4><%= link_to product.name, category_product_path(product, product.category_id) %></h4>
+    <h4><%= link_to product.name, category_product_path(product.category_id, product) %></h4>
   <% end %>
+<% else %>
+  <p><i>There are no products tagged with <%= @tag.name %> yet!</i></p>
 <% end %>
 <br /><br />
 </div>

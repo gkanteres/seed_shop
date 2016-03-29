@@ -4,11 +4,6 @@ class TagsController < ApplicationController
   before_action :set_categories
 
   def index
-    # if params[:search]
-    #   @tags = Tag.search(params[:search]).order("name DESC")
-    # else
-    #   flash[:notice] = "Search returned no results"
-    # end
   end
 
   def new

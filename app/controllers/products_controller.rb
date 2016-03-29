@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     if params[:search]
       @products = Product.search(params[:search]).order("name DESC")
+      @tags = Tag.search(params[:search]).order("name DESC")
     else
       flash[:notice] = "Search returned no results"
     end

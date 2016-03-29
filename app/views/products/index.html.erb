@@ -4,6 +4,10 @@
   <%= link_to product.name, category_product_path(product, product.category_id) %><br />
 <% end %>
 
-<% if @products.blank? %>
-  <h4>There are no products containing the term <%= params[:search] %>.</h4>
+<% @tags.each do |tag| %>
+<%= link_to tag.name, tag_path(tag) %> (tag)
+<% end %>
+
+<% if @products.blank? && @tags.blank? %>
+  <h4>Search returned no results for "<%= params[:search] %>".</h4>
 <% end %>

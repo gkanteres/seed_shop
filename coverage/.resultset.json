@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/seed_shop/spec/controllers/products_controller_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/controllers/products_controller_spec.rb": [
         1,
         null,
         1,
@@ -15,7 +15,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/controllers/reviews_controller_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/controllers/reviews_controller_spec.rb": [
         1,
         null,
         1,
@@ -29,29 +29,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/features/add_product_to_category_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/seed_shop/spec/features/add_review_to_product_pages_spec.rb": [
-        1,
+      "/home/gregory/Desktop/seed_shop/spec/features/add_product_to_category_pages_spec.rb": [
         1,
         null,
         1,
@@ -71,7 +49,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/features/create_category_pages_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/features/add_review_to_product_pages_spec.rb": [
         1,
         1,
         null,
@@ -80,57 +58,87 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/models/admin_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/features/create_category_pages_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/gregory/Desktop/seed_shop/spec/models/admin_spec.rb": [
         1,
         null,
         1,
         2,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/models/category_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/models/category_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/Guest/Desktop/seed_shop/spec/models/product_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/Guest/Desktop/seed_shop/spec/models/review_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
         2,
         2,
         2,
         null
       ],
-      "/Users/Guest/Desktop/seed_shop/spec/models/user_spec.rb": [
+      "/home/gregory/Desktop/seed_shop/spec/models/product_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/home/gregory/Desktop/seed_shop/spec/models/review_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/home/gregory/Desktop/seed_shop/spec/models/tag_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/home/gregory/Desktop/seed_shop/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -144,6 +152,6 @@
         null
       ]
     },
-    "timestamp": 1458842826
+    "timestamp": 1459369304
   }
 }

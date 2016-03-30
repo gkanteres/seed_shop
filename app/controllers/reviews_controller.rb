@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
   before_action :set_category
   before_action :set_product
   before_action :set_categories
+  before_action :set_tags
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -48,10 +49,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to category_product_path(@category, @product)
   end
 
   private
@@ -69,6 +67,10 @@ class ReviewsController < ApplicationController
 
     def set_categories
       @categories = Category.all
+    end
+
+    def set_tags
+      @tags = Tag.all
     end
 
     def review_params

@@ -58,6 +58,14 @@ $<%= @product.price %>
     <%= review.review_content %><br />
     Reviewed by:<br /> <!-- < %= link_to review.user.username, user_path(user) % > -->
     <i><%= review.created_at %></i>
+
+    <%= link_to(category_product_review_path(@category, @product, review),
+        data: {
+          confirm: 'Delete review?',
+          method: 'delete'}) do %>
+          Delete
+          <% end %>
+
     <hr>
   <% end %>
 <% else %>

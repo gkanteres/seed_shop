@@ -5,13 +5,16 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
    def new
      @categories = Category.all
+     @tags = Tag.all
      super
    end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     @categories = Category.all
+     @tags = Tag.all
+     super
+   end
 
   # GET /resource/edit
   # def edit

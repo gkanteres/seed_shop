@@ -4,6 +4,7 @@ class Admins::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
    def new
      @categories = Category.all
+     @tags = Tag.all
      super
    end
 

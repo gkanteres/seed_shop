@@ -37,7 +37,7 @@ $<%= @product.price %>
       Delete
       <% end %>
 <br /><br />
-<%= link_to 'Back to Category', category_path(@category) %>
+<%= link_to 'Back to Category', category_path(@product.category_id) %>
 </div>
 <br />
 
@@ -56,8 +56,16 @@ $<%= @product.price %>
   <% @product.reviews.reverse_each do |review| %>
     <i>"<%= review.review_title %>"</i><br />
     <%= review.review_content %><br />
-    Reviewed by:<br /> <!-- < %= link_to review.user.username, user_path(user) % > -->
+    <!-- Reviewed by: < %= review.user.username %>  -->
     <i><%= review.created_at %></i>
+
+    <%= link_to(category_product_review_path(@category, @product, review),
+        data: {
+          confirm: 'Delete review?',
+          method: 'delete'}) do %>
+          Delete
+          <% end %>
+
     <hr>
   <% end %>
 <% else %>

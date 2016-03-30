@@ -2,6 +2,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def new
     @categories = Category.all
+    @tags = Tag.all
+    super
+  end
+
+  def create
+    @categories = Category.all
+    @tags = Tag.all
     super
   end
 

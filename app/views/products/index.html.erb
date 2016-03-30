@@ -5,7 +5,10 @@
 <% end %>
 
 <% @tags.each do |tag| %>
-<%= link_to tag.name, tag_path(tag) %> (tag)
+<%= link_to tag.name, tag_path(tag) %> (tag)<br />
+<% tag.products.each do |product_tag| %>
+<%= link_to product_tag.name, category_product_path(product_tag.category_id, product_tag.id) %><br />
+<% end %>
 <% end %>
 
 <% if @products.blank? && @tags.blank? %>

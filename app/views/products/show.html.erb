@@ -56,7 +56,7 @@ $<%= @product.price %>
   <% @product.reviews.reverse_each do |review| %>
     <i>"<%= review.review_title %>"</i><br />
     <%= review.review_content %><br />
-    <!-- Reviewed by: < %= review.user.username %>  -->
+    Reviewed by: <%= review.user.username %> 
     <i>posted <%= review.created_at.strftime("%b %d, %Y, %l:%M%P") %></i>
     <br />
     <%= link_to(category_product_review_path(@category, @product, review),

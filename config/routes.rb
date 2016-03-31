@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
    resources :tags
 
+   resources :charges
+
    resources :categories do
      resources :products do
        resources :reviews

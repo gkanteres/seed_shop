@@ -45,7 +45,7 @@ Tags:
 <div class="container">
 <h3><%= @product.name %> Reviews:</h3>
 <% if user_signed_in? %>
-  <%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
+  <span class="glyphicon glyphicon-pencil"></span><%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
 <% else %>
 <p>You must be signed in to add a review!</p>
 <% end %>

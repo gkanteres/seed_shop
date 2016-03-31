@@ -65,7 +65,7 @@
 
     <ul class="nav navbar-nav navbar-right" id="user_auth">
       <% if user_signed_in? %>
-        <li><i>Signed in as: </i><%= current_user.username %></li>
+        <li><span class="glyphicon glyphicon-user"></span> <%= current_user.username %></li>
         <li><%= link_to 'My Account', user_path(current_user), method: :get %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
       <% else %>

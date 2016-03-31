@@ -2,6 +2,8 @@
 <h1><%= @product.name %></h1>
 <h2><i><%= @product.latin_name %></i></h2>
 <br />
+  <i><%= link_to 'Back to ' + @category.name, category_path(@product.category_id) %></i>
+<br />
 <!-- images entered in this format: /assets/balsamroot.jpg -->
 <img src="<%= @product.image %>" width="300px" height="300px"/>
 <br /><br />
@@ -14,20 +16,19 @@ Description:
 <div id="star"></div>
 <div id="user_star"</div><br />
 <br /> -->
-
+Price:
+<br />
+$<%= @product.price %>
+<br /><br />
 Tags:
 <br />
 <% @product.tags.each do |tag| %>
 <%= link_to tag.name, tag_path(tag) %>;
 <% end %>
 <br /><br />
-
-Price:
-<br />
-$<%= @product.price %>
-<br /><br />
 </div>
 
+<% if admin_signed_in? %>
 <div class="container">
 <%= link_to 'Edit', edit_category_product_path(@category, @product) %> |
 <%= link_to(category_product_path(@category, @product),
@@ -36,36 +37,33 @@ $<%= @product.price %>
       method: 'delete'}) do %>
       Delete
       <% end %>
-<br /><br />
-<%= link_to 'Back to Category', category_path(@product.category_id) %>
 </div>
 <br />
-
-<% if user_signed_in? %>
-<div class="container">
-  <%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
-</div>
-<% else %>
-<p>You must be signed in to add a review!</p>
 <% end %>
+
 
 <div class="container">
 <h3><%= @product.name %> Reviews:</h3>
+<% if user_signed_in? %>
+  <%= link_to 'Add review', new_category_product_review_path(@category, @product) %>
+<% else %>
+<p>You must be signed in to add a review!</p>
+<% end %>
 <hr>
+
 <% if @product.reviews.any? %>
   <% @product.reviews.reverse_each do |review| %>
-    <i>"<%= review.review_title %>"</i><br />
-    <%= review.review_content %><br />
-    Reviewed by: <%= review.user.username %> 
-    <i>posted <%= review.created_at.strftime("%b %d, %Y, %l:%M%P") %></i>
+    <i><b>"<%= review.review_title %>"</b></i><br />
+    <%= review.review_content %><br /><br />
+    <span class="glyphicon glyphicon-user"></span> <%= review.user.username %><br />
+    <div class="sm_txt"><i><%= review.created_at.strftime("%b %d, %Y, %l:%M%P") %></i></div>
     <br />
     <%= link_to(category_product_review_path(@category, @product, review),
         data: {
           confirm: 'Delete review?',
           method: 'delete'}) do %>
-          Delete
+          <div class="sm_txt">Delete</div>
           <% end %>
-
     <hr>
   <% end %>
 <% else %>

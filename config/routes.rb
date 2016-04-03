@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
 
+
+  get 'carts/show'
+
    root 'categories#index'
 
    get '/products' => 'products#index', as: :products
 
-   resources :ratings, only: :update
-
+   resources :order_items, only: [:create, :update, :destroy]
+   resource :cart, only: [:show]
    resources :tags
-
+   resources :ratings, only: :update
    resources :charges
 
    resources :categories do

@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   def index
     @tags = Tag.all
     @products = Product.all
+    @order_item = current_order.order_items.new
     if params[:search]
       @products = Product.search(params[:search]).order("name DESC")
       @tags = Tag.search(params[:search]).order("name DESC")
@@ -33,6 +34,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @order_item = current_order.order_items.new
     # @review = Review.find(params[:review_id])
     #
     # @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first

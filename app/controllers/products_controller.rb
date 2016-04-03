@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :set_tags
   before_action :set_categories
-  # before_action :set_user
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
@@ -73,11 +72,6 @@ class ProductsController < ApplicationController
   def set_category
     @category = Category.find(params[:category_id])
   end
-
-  # def set_user
-  #   @review = @product.reviews(params[:review_id])
-  #   @review.user = current_user
-  # end
 
   def product_params
     params.require('product').permit(:name, :latin_name, :description, :price, :image, :category_id, :user_id, :cart_id, tag_ids: [])

@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
   before_action :set_product
   before_action :set_categories
   before_action :set_tags
-  # before_action :set_user
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -12,10 +11,10 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first
-    unless @rating
-      @rating = Rating.create(review_id: @review.id, user_id: @current_user.id, score: 0)
-    end
+    # @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first
+    # unless @rating
+    #   @rating = Rating.create(review_id: @review.id, user_id: @current_user.id, score: 0)
+    #end
   end
 
   def new
@@ -28,6 +27,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
+    @review.user = current_user
       if @review.save
         redirect_to category_product_path(@category, @product)
       else
@@ -73,10 +73,6 @@ class ReviewsController < ApplicationController
     def set_tags
       @tags = Tag.all
     end
-
-    # def set_user
-    #   @review.user = current_user
-    # end
 
     def review_params
       params.require('review').permit(:review_title, :review_content, :product_id, :user_id)

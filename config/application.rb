@@ -21,5 +21,6 @@ module SeedShop
 
     config.active_record.raise_in_transactional_callbacks = true
     config.serve_static_assets = true
+    config.stripe.publishable_key = 'pk_test_B3sUrAfSoRweuCliuU3aumQP'
   end
 end

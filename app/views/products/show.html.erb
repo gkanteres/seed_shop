@@ -54,14 +54,6 @@ Tags:
 <% if @product.reviews.any? %>
   <% @product.reviews.reverse_each do |review| %>
 
-    <i>"<%= review.review_title %>"</i><br />
-    <%= review.review_content %><br />
-    <!-- Reviewed by: < %= review.user.username %>  -->
-    <br />
-    <div id="created_at">
-      <i>posted <%= review.created_at.strftime("%b %d, %Y, %l:%M%P") %></i>
-    </div>
-
     <i><b>"<%= review.review_title %>"</b></i><br />
     <%= review.review_content %><br /><br />
     <span class="glyphicon glyphicon-user"></span> <%= review.user.username %><br />

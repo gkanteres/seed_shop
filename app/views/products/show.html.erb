@@ -12,10 +12,6 @@ Description:
 <%= @product.description %>
 <br /><br />
 
-<!-- <p>Average rating</p>
-<div id="star"></div>
-<div id="user_star"</div><br />
-<br /> -->
 Price:
 <br />
 $<%= @product.price %>
@@ -41,6 +37,10 @@ Tags:
 <br />
 <% end %>
 
+<p>Your rating</p>
+<div id="user_star"></div>
+<br /><br />
+
 
 <div class="container">
 <h3><%= @product.name %> Reviews:</h3>
@@ -58,7 +58,6 @@ Tags:
     <%= review.review_content %><br /><br />
     <span class="glyphicon glyphicon-user"></span> <%= review.user.username %><br />
     <div class="sm_txt"><i><%= review.created_at.strftime("%b %d, %Y, %l:%M%P") %></i></div>
-
     <br />
     <%= link_to(category_product_review_path(@category, @product, review),
         data: {
@@ -74,11 +73,6 @@ Tags:
 </div>
 
 <!-- <script>
-  $('#star').raty({
-    readOnly: true,
-    score: < %= @review.average_rating %>,
-    path: '/assets'
-  });
   $('#user_star').raty({
     score: < %= @rating.score %>,
     path: '/assets',

@@ -33,6 +33,12 @@ class ProductsController < ApplicationController
   end
 
   def show
+    # @review = Review.find(params[:review_id])
+    #
+    # @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first
+    # unless @rating
+    #   @rating = Rating.create(review_id: @review.id, user_id: @current_user.id, score: 0)
+    # end
   end
 
   def edit

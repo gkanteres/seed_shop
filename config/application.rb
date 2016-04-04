@@ -18,7 +18,7 @@ Bundler.require(*Rails.groups)
 
 module SeedShop
   class Application < Rails::Application
-
+    config.force_ssl = true
     config.active_record.raise_in_transactional_callbacks = true
     config.serve_static_assets = true
     config.stripe.publishable_key = 'pk_test_B3sUrAfSoRweuCliuU3aumQP'

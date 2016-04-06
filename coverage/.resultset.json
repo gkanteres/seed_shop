@@ -58,6 +58,23 @@
         2,
         null
       ],
+      "/Users/Guest/Desktop/seed_shop/spec/features/add_item_to_cart_pages_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/seed_shop/spec/features/add_product_to_category_pages_spec.rb": [
         1,
         null,
@@ -206,6 +223,6 @@
         null
       ]
     },
-    "timestamp": 1459959372
+    "timestamp": 1459959855
   }
 }

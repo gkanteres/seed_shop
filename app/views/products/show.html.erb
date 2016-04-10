@@ -46,11 +46,6 @@ Tags:
 <br />
 <% end %>
 
-<p>Your rating</p>
-<div id="user_star"></div>
-<br /><br />
-
-
 <div class="container">
 <h3><%= @product.name %> Reviews:</h3>
 <% if user_signed_in? %>
@@ -80,17 +75,3 @@ Tags:
   <p><i>Be the first to review this product!</i></p>
 <% end %>
 </div>
-
-<!-- <script>
-  $('#user_star').raty({
-    score: < %= @rating.score %>,
-    path: '/assets',
-    click: function(score, evt) {
-      $.ajax({
-        url: '/ratings/' + < %= @rating.id %> + '?user=< %= @current_user.username %>',
-        type: 'PATCH',
-        data: { score: score, review_id: '< %= @review.id %>' }
-      });
-    }
-  });
-</script> -->

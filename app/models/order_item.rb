@@ -20,6 +20,9 @@ class OrderItem < ActiveRecord::Base
     unit_price * quantity
   end
 
+  # def cart_price
+  # end
+
 private
 
   def product_present
@@ -37,6 +40,7 @@ private
   def finalize
     self[:unit_price] = unit_price
     self[:total_price] = quantity * self[:unit_price]
+    # self[:cart_price] = self[:total_price].sum
   end
 
 end

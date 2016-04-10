@@ -63,9 +63,9 @@
     </div>
   </div>
 
-    <ul class="nav navbar-nav navbar-right" id="user_auth">
-      <!-- <li><span class="glyphicon glyphicon-shopping-cart"></span>Cart</li>
-           <li>< %= render layouts/cart_text %> ??? -->
+    <ul class="nav navbar-nav navbar-right" id="user_area">
+      <li><span class="glyphicon glyphicon-shopping-cart"></span></li>
+      <li><%= render 'layouts/cart_text' %></li>
       <% if user_signed_in? %>
         <li><span class="glyphicon glyphicon-user"></span> <%= current_user.username %></li>
         <li><%= link_to 'My Account', user_path(current_user), method: :get %></li>
@@ -82,7 +82,6 @@
 
   <div class="container" id="main_div">
   <%= flash[:notice] %>
-  <%= render 'layouts/cart_text' %></h1>
   <%= yield %>
   </div>
 

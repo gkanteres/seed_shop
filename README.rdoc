@@ -1,10 +1,11 @@
 == README
 
-===Description
+=== Description
 This is an individual project for the Epicodus Ruby on Rails class.
+It is a basic e-commerce site with user authorization, shopping cart, and payment processing via the Stripe API.
 
-===Author
+=== Author
 Gregory Kanteres
 
-===License
+=== License
 MIT License

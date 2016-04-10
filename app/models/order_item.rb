@@ -20,7 +20,13 @@ class OrderItem < ActiveRecord::Base
     unit_price * quantity
   end
 
-  # def cart_price
+  # def all_totals
+  #   order_items.map do |i| i.total_price
+  #   end
+  # end
+  #
+  # def cart_total
+  #   all_totals.sum
   # end
 
 private

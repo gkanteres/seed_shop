@@ -1,18 +1,19 @@
 <%= form_tag charges_path do %>
   <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
+
+<!-- < %= label_tag 'amount', 'To Pay', class: 'amount' %>
+     < %= label_tag 'amount', "$#{@amount}.00", class: 'amount-figure' %> -->
     <label class="amount">
       <span>Amount: $5.00</span>
     </label>
   </article>
 
+
+<!-- data-amount-amount="< %= @amount * 100 %>"
+     data-key="< %= Settings[Rails.env]['stripe']['publishable_key']" %> -->
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
+          data-description="Payment Data Description"
           data-amount="500"
           data-currency="usd"
           data-bitcoin="true"

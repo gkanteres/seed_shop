@@ -17,4 +17,6 @@
     <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
   <% end %>
   <h3 class="text-right">Cart Total: <%= number_to_currency @order.subtotal %></h3>
+  <br />
+  <h3 class="text-right"><%= link_to "Checkout", new_charge_path %></h3>
 <% end %>

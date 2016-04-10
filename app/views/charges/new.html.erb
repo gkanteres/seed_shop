@@ -4,17 +4,17 @@
 <!-- < %= label_tag 'amount', 'To Pay', class: 'amount' %>
      < %= label_tag 'amount', "$#{@amount}.00", class: 'amount-figure' %> -->
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>Amount: <%= number_to_currency @order.subtotal %></span>
     </label>
   </article>
 
 
-<!-- data-amount-amount="< %= @amount * 100 %>"
+<!-- data-amount="< %= @amount * 100 %>"
      data-key="< %= Settings[Rails.env]['stripe']['publishable_key']" %> -->
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Payment Data Description"
-          data-amount="500"
+          data-amount="<%= @order.subtotal.to_i * 100 %>"
           data-currency="usd"
           data-bitcoin="true"
           data-locale="auto"></script>

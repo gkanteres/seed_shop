@@ -1,11 +1,18 @@
 class ChargesController < ApplicationController
 
   def new
+    @order = current_order
   end
 
   def create
+
+    @order = current_order
+
     #Amount in cents
-    amount = params[:stripeAmount].to_i * 100
+    amount = @order.subtotal.to_i * 100
+
+    Stripe.api_key = ENV["stripe_api_key"]
+    ENV["stripe_api_key"]
 
     #Create the customer in Stripe
     customer = Stripe::Customer.create(

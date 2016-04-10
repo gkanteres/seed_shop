@@ -16,5 +16,5 @@
   <% @order_items.each do |order_item| %>
     <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
   <% end %>
-  <%= number_to_currency @order.subtotal %>
+  <h3 class="text-right">Cart Total: <%= number_to_currency @order.subtotal %></h3>
 <% end %>

@@ -60,6 +60,18 @@ ul {
   width: 75px;
 }
 
+#cart-row {
+  background-color: #aac18b;
+  border-color: #607740;
+  color: $kelp-green;
+    a {
+      color: $kelp-green;
+    }
+    .btn {
+      color: white;
+    }
+}
+
 .form-inline div {
   display: inline;
 }

@@ -2,8 +2,6 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_category
   before_action :set_product
-  before_action :set_categories
-  before_action :set_tags
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -64,14 +62,6 @@ class ReviewsController < ApplicationController
 
     def set_product
       @product = Product.find(params[:product_id])
-    end
-
-    def set_categories
-      @categories = Category.all
-    end
-
-    def set_tags
-      @tags = Tag.all
     end
 
     def review_params

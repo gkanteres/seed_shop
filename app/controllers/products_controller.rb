@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :set_tags
-  before_action :set_categories
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
@@ -35,12 +33,6 @@ class ProductsController < ApplicationController
 
   def show
     @order_item = current_order.order_items.new
-    # @review = Review.find(params[:review_id])
-    #
-    # @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first
-    # unless @rating
-    #   @rating = Rating.create(review_id: @review.id, user_id: @current_user.id, score: 0)
-    # end
   end
 
   def edit
@@ -67,14 +59,6 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
-  end
-
-  def set_tags
-    @tags = Tag.all
-  end
-
-  def set_categories
-    @categories = Category.all
   end
 
   def set_category

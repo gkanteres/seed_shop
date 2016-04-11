@@ -27,7 +27,7 @@ stripe_api_key: "sk_test_##########################"
 stripe_publishable_key: "pk_test_##########################"
 ```
 
-'rails server'
+`rails server`
 
 visit **localhost:3000**
 

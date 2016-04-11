@@ -70,7 +70,7 @@
         1,
         1,
         1,
-        0,
+        1,
         0,
         null,
         null
@@ -163,14 +163,6 @@
         null,
         1,
         2,
-        2,
-        null
-      ],
-      "/home/gregory/Desktop/seed_shop/spec/models/order_status_spec.rb": [
-        1,
-        null,
-        1,
-        2,
         null
       ],
       "/home/gregory/Desktop/seed_shop/spec/models/product_spec.rb": [
@@ -223,6 +215,6 @@
         null
       ]
     },
-    "timestamp": 1460315177
+    "timestamp": 1460405060
   }
 }

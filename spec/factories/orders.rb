@@ -6,6 +6,5 @@ FactoryGirl.define do
     tax "9.99"
     shipping "9.99"
     total "9.99"
-    order_status nil
   end
 end

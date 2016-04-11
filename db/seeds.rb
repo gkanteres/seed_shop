@@ -15,9 +15,3 @@ Tag.create! id: 3, name: "Native"
 Tag.create! id: 4, name: "Edible"
 Tag.create! id: 5, name: "Medicinal"
 Tag.create! id: 6, name: "Showy"
-
-OrderStatus.delete_all
-OrderStatus.create! id: 1, name: "In Progress"
-OrderStatus.create! id: 2, name: "Placed"
-OrderStatus.create! id: 3, name: "Shipped"
-OrderStatus.create! id: 4, name: "Cancelled"

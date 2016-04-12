@@ -4,6 +4,8 @@
 <% @items.each do |item| %>
 <img id="cart-image" src="<%= item.product.image %>"/>
 <%= link_to item.product.name, category_product_path(item.product.category, item.product) %><br />
+Qty: <%= item.quantity %><br />
+Price: <%= number_to_currency item.unit_price %><br />
+Total: <%= number_to_currency item.total_price %><br />
 <% end %>
 <br />
-<%= link_to 'Home', root_path %>

@@ -6,11 +6,19 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
+require 'capybara/poltergeist'
+require 'phantomjs'
 require 'factory_girl_rails'
 require 'database_cleaner'
 require 'simplecov'
 
 ActiveRecord::Migration.maintain_test_schema!
+
+Capybara.javascript_driver = :poltergeist
+
+# Capybara.register_driver :poltergeist do |app|
+#   Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+# end
 
 SimpleCov.start
 

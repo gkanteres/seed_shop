@@ -40,6 +40,8 @@ gem 'selenium-webdriver'
 group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 group :development, :test do

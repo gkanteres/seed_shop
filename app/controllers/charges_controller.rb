@@ -5,6 +5,7 @@ class ChargesController < ApplicationController
   end
 
   def create
+    @user = current_user
     @order = current_order
     @items = @order.order_items
 

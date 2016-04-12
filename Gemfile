@@ -54,6 +54,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'brakeman', '~> 3.2', '>= 3.2.1'
 end
 
 group :development do

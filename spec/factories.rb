@@ -31,7 +31,6 @@ end
     name 'Test Product'
     latin_name 'Testus Productii'
     description 'Test Description'
-    #tag 'product_tag'
     price 5
     image 'test_image_url'
   end

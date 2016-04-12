@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'launchy'
 
-describe 'the add item to a cart process' do
+describe 'the add item to a cart process', :js => true do
   it 'adds item to the cart' do
     user = FactoryGirl.create(:user)
     category = FactoryGirl.create(:category)

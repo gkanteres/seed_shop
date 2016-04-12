@@ -1,3 +1,9 @@
 <h2>Thanks, you paid <%= number_to_currency @order.subtotal %>!</h2>
 
+<h3>Your Order:</h3><br />
+<% @items.each do |item| %>
+<img id="cart-image" src="<%= item.product.image %>"/>
+<%= link_to item.product.name, category_product_path(item.product.category, item.product) %><br />
+<% end %>
+<br />
 <%= link_to 'Home', root_path %>

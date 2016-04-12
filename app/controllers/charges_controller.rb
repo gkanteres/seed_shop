@@ -5,8 +5,8 @@ class ChargesController < ApplicationController
   end
 
   def create
-
     @order = current_order
+    @items = @order.order_items
 
     #Amount in cents
     amount = @order.subtotal.to_i * 100
@@ -27,6 +27,7 @@ class ChargesController < ApplicationController
     description: 'Rails Stripe customer',
     currency: 'usd'
     )
+    # @order = Order.new
   end
 
 end

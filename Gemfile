@@ -26,6 +26,7 @@ gem 'devise'
 gem 'stripe'
 gem 'stripe-rails'
 gem 'figaro'
+gem 'selenium-webdriver'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

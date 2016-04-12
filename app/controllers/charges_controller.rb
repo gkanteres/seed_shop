@@ -27,7 +27,10 @@ class ChargesController < ApplicationController
     description: 'Rails Stripe customer',
     currency: 'usd'
     )
-    # @order = Order.new
+
+    # @items.destroy_all
+
+
   end
 
 end

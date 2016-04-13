@@ -9,8 +9,7 @@ describe 'the add item to a cart process', :js => true do
     login_as(user, :scope => :user)
     visit category_product_path(category, product)
     click_button 'Add to Cart'
-    visit cart_path
-    # click_link '1 Items in Cart ( $5.00 )'
+    click_link '1 Items in Cart ( $5.00 )'
     expect(page).to have_content 'Total Price: $5.00'
   end
 end

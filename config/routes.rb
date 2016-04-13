@@ -8,7 +8,7 @@ Rails.application.routes.draw do
    get '/products' => 'products#index', as: :products
 
    resources :order_items, only: [:create, :update, :destroy]
-   resource :cart, only: [:show]
+   resource :cart, only: [:show, :destroy]
    resources :tags
    resources :ratings, only: :update
    resources :charges

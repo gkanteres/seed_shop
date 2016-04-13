@@ -21,11 +21,6 @@ class OrderItemsController < ApplicationController
     @order_items = @order.order_items
   end
 
-  def clear
-    @order = current_order
-    @order.clear
-  end
-
 private
 
   def order_item_params

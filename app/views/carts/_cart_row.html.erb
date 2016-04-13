@@ -24,6 +24,7 @@
         <h4 class="text-right">Total Price: <%= number_to_currency order_item.total_price %></h4>
       <% end %>
     </div>
+    <%= link_to "Clear Cart", order_items, { data: { confirm: "Empty Cart?"}, method: :clear, remote: true, class: "btn btn-danger" } %>
 
   </div>
 </div>

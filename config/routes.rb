@@ -10,7 +10,6 @@ Rails.application.routes.draw do
    resources :order_items, only: [:create, :update, :destroy]
    resource :cart, only: [:show, :destroy]
    resources :tags
-   resources :ratings, only: :update
    resources :charges
 
    resources :categories do

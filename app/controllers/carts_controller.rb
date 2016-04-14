@@ -11,7 +11,9 @@ class CartsController < ApplicationController
     @order_items.each do |item|
       item.destroy
     end
-    # @order_items = @order.order_items
+    # redirect_to cart_path(@cart)      ::: breaks responsive cart
+    # render :show                      ::: breaks responsive cart
+    # @order_items = @order.order_items ::: does nothing
   end
 
 end

@@ -20,5 +20,5 @@
   <br />
   <h3 class="text-right"><%= link_to "Checkout", new_charge_path %></h3>
   <br />
-  <h4 class="text-left"><%= link_to "Clear Cart", cart_path(@cart), { data: { confirm: "Empty Cart?"}, method: :delete, remote: true, class: "btn btn-danger" } %></h4>
+  <h4 class="text-left"><%= link_to "Clear Cart", cart_path, { data: { confirm: "Empty Cart?"}, method: :delete, remote: true, class: "btn btn-danger" } %></h4>
 <% end %>

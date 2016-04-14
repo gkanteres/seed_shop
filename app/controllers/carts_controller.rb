@@ -1,8 +1,8 @@
 class CartsController < ApplicationController
 
   def show
-    @order_items = current_order.order_items
     @order = current_order
+    @order_items = @order.order_items
   end
 
   def destroy
@@ -13,7 +13,7 @@ class CartsController < ApplicationController
     end
     # redirect_to cart_path(@cart)      ::: breaks responsive cart
     # render :show                      ::: breaks responsive cart
-    # @order_items = @order.order_items ::: does nothing
+    # @order_items = @order.order_items ::: no effect
+    # @order = current_order            ::: no effect
   end
-
 end
